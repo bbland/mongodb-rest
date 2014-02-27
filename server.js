@@ -28,7 +28,7 @@ var app = module.exports.app = express.createServer();
 try {
   config = JSON.parse(fs.readFileSync(process.cwd()+"/config.json"));
 } catch(e) {
-  // ignore
+  console.error( "Problem parsing config file: " + e );
 }
 
 module.exports.config = config;
